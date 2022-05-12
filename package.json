@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "chakra:generate-theme-typings": "chakra-cli tokens theme",
-    "postinstall": "npm run chakra:generate-theme-typings"
+    "ts-node": "ts-node --compiler-options '{\\\"module\\\":\\\"commonjs\\\"}'"
+  },
+  "prisma": {
+    "schema": "src/api/prisma/schema.prisma"
   },
   "dependencies": {
     "@chakra-ui/cli": "^1.5.1",
@@ -16,6 +19,7 @@
     "@chakra-ui/theme-tools": "^1.2.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@prisma/client": "^3.14.0",
     "framer-motion": "^6",
     "next": "12.1.0",
     "react": "17.0.2",
@@ -41,6 +45,8 @@
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "prisma": "^3.14.0",
+    "ts-node": "^10.7.0"
   }
 }
