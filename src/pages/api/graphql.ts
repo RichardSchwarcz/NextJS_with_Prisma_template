@@ -2,12 +2,17 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { ApolloServer } from 'apollo-server-micro'
 import Cors from 'micro-cors'
+import { createContext } from '../../api/graphql/context'
 import { Resolvers as resolvers } from '../../api/graphql/resolvers'
 import { TypeDefs as typeDefs } from '../../api/graphql/schema'
 
 const cors = Cors()
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers })
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: createContext,
+})
 
 const startServer = apolloServer.start()
 
