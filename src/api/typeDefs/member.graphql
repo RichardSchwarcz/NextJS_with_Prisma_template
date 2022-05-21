@@ -1,0 +1,12 @@
+type Member {
+  id: String
+  name: String
+  address: String
+  email: String
+  telNumber: String
+  isStudent: Boolean
+}
+
+type Query {
+  members: [Member]!
+}
