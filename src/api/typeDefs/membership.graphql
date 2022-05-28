@@ -1,4 +1,4 @@
-type Member {
+type Membership {
   id: Int
   name: String
   address: String
@@ -8,8 +8,4 @@ type Member {
   memberships: [Membership]
   createdAt: Date
   updatedAt: Date
-}
-
-type Query {
-  members: [Member]!
 }
