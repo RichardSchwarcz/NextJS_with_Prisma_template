@@ -14,7 +14,8 @@ datasource db {
 
 model Member {
   id          Int          @id @default(autoincrement())
-  name        String
+  firstName   String
+  lastName    String
   address     String
   email       String?
   telNumber   String?
@@ -22,6 +23,8 @@ model Member {
   memberships Membership[]
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
+  country     String
+  gender      GenderType
 }
 
 model Membership {
@@ -41,4 +44,9 @@ enum MemebershipType {
   MONTHLY6
   MONTHLY12
   ENTRY15
+}
+
+enum GenderType {
+  MAN
+  WOMAN
 }

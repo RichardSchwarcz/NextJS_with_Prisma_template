@@ -13,7 +13,8 @@
     "graphql:generate-types-fe": "graphql-codegen --config condegen-fe.yml"
   },
   "prisma": {
-    "schema": "src/api/prisma/schema.prisma"
+    "schema": "src/api/prisma/schema.prisma",
+    "seed": "ts-node src/api/prisma/seed.ts"
   },
   "dependencies": {
     "@apollo/client": "^3.6.5",
