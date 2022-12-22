@@ -10,7 +10,7 @@
     "chakra:generate-theme-typings": "chakra-cli tokens theme",
     "ts-node": "ts-node --compiler-options '{\\\"module\\\":\\\"commonjs\\\"}'",
     "graphql:generate-types": "graphql-codegen --config codegen.yml",
-    "graphql:generate-types-fe": "graphql-codegen --config condegen-fe.yml"
+    "graphql:generate-types-fe": "graphql-codegen --config codegen-fe.yml"
   },
   "prisma": {
     "schema": "src/api/prisma/schema.prisma",
