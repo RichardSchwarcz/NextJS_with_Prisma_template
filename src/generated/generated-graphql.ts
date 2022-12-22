@@ -21,10 +21,11 @@ export type Member = {
   address?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   email?: Maybe<Scalars['String']>;
+  firstName?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['Int']>;
   isStudent?: Maybe<Scalars['Boolean']>;
+  lastName?: Maybe<Scalars['String']>;
   memberships?: Maybe<Array<Maybe<Membership>>>;
-  name?: Maybe<Scalars['String']>;
   telNumber?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['Date']>;
 };
@@ -50,13 +51,14 @@ export type Query = {
 export type MembersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MembersQuery = { __typename?: 'Query', members: Array<{ __typename?: 'Member', name?: string | null, id?: number | null, address?: string | null, email?: string | null, telNumber?: string | null, isStudent?: boolean | null, createdAt?: string | null, updatedAt?: string | null } | null> };
+export type MembersQuery = { __typename?: 'Query', members: Array<{ __typename?: 'Member', firstName?: string | null, lastName?: string | null, id?: number | null, address?: string | null, email?: string | null, telNumber?: string | null, isStudent?: boolean | null, createdAt?: string | null, updatedAt?: string | null } | null> };
 
 
 export const MembersDocument = gql`
     query Members {
   members {
-    name
+    firstName
+    lastName
     id
     address
     email
