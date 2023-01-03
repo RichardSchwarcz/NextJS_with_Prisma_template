@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lightweight template for full stack app
 
-## Getting Started
+## Tech Stack
 
-First, run the development server:
+- [Prisma](https://www.prisma.io/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [GraphQL](https://graphql.org/)
+- [GraphQL Codegen](https://the-guild.dev/graphql/codegen)
+- [Chakra UI](https://chakra-ui.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run `yarn` from root directory to install packages.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Running the project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Copy `.env.example` to `.env` filling variables in all modules as needed
+2. Inside `root folder` run `docker-compose` up or `docker-compose up -d`
+   to start the containers in detached mode (docker ps to check if containers are running)
+3. Run migrations with `yarn prisma migrate dev`
+4. Now run `yarn dev` to start the Next.js server at http://localhost:3000
+   In the same folder run `yarn prisma studio` this will create database GUI at http://localhost:5555
+5. In the same folder run `yarn db:seed` to add seed data to the database
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Installing a new package from root
 
-## Learn More
+1. go to root folder
+2. run `yarn add <package name>`
 
-To learn more about Next.js, take a look at the following resources:
+## Running package scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Just use `yarn run <script name>` (or - shorter - `yarn <script name>`)
